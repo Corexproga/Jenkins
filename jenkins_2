@@ -1,7 +1,7 @@
-pipeline{
+pipeline {
  agent any
  environment {
- VAR = "${params.VAR}"
+  VAR = "${params.VAR}"
  }
  stages {
   stage("Display param") {
@@ -9,11 +9,11 @@ pipeline{
     script {
      if(VAR)
      {
-     Echo “my value is true”
+      Echo “my value is true”
      }
      else if(VAR)
      {
-     Echo “my value is false”
+      Echo “my value is false”
      }
     
     }
