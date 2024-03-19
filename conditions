@@ -13,5 +13,15 @@ pipeline {
             }
           }
         }
+        stage("test") {
+            when{
+                expression{
+                    params.ENVIR == 'dev'
+                }
+            }
+            steps{
+                echo 'dev environment ok'
+            }
+        }
     }
 }
